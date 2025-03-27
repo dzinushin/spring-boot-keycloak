@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: echo-kotlin
+
+server:
+  port: 8085
