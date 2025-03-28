@@ -38,6 +38,7 @@ public class SecurityConfig {
                         authorizeExchange ->
                                 authorizeExchange.pathMatchers(
                                                 "/actuator/**",
+                                                "/all",
                                                 "/access-token/**",
                                                 "/id-token")
                                         .permitAll()

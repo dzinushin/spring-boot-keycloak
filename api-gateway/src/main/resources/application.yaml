@@ -40,11 +40,21 @@ spring:
             allowedHeaders: "*"
             exposedHeaders: "*"
       routes:
-        - id: test-app
+        - id: echo-app
           uri: http://localhost:8085/
+          predicates:
+            - Path=/echo/**
+            - Method= GET
+          filters:
+            - RewritePath=/echo/?(?<segment>.*), /${segment}
+            - CustomHeaderFilter
+            - TokenRelay=
+        - id: test-app
+          uri: http://localhost:8086/
           predicates:
             - Path=/test/**
             - Method= GET
           filters:
+            - RewritePath=/test/?(?<segment>.*), /${segment}
             - CustomHeaderFilter
             - TokenRelay=

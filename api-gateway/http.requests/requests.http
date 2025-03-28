@@ -1,0 +1,4 @@
+# get user info
+GET {{keycloakUrl}}/realms/{{realm}}/protocol/openid-connect/userinfo
+Authorization: Bearer {{access_token}}
+###

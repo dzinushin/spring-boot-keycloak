@@ -68,7 +68,7 @@
       "bearerOnly": false,
       "redirectUris": [
         "http://localhost:8080/login/oauth2/*",
-        "http://127.0.0.1:8080/login/oauth2 /*"
+        "http://127.0.0.1:8080/login/oauth2/*"
       ],
       "secret": "secret",
       "authorizationServicesEnabled": true,
