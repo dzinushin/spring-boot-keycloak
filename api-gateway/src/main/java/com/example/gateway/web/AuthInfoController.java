@@ -14,16 +14,15 @@ import org.springframework.session.Session;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ServerWebExchange;
+import org.springframework.web.server.WebSession;
 import reactor.core.publisher.Mono;
 
 @RestController
 public class AuthInfoController {
 
     @GetMapping("/session")
-    public Mono<String> getSession(ServerWebExchange exchange) {
-        return exchange.getSession().map(session -> {
-           return String.format("sessionId:  %s\n\n  SPRING_SECURITY_CONTEXT: %s " , session.getId(),session.getAttributes().get("SPRING_SECURITY_CONTEXT").toString());
-        });
+    public Mono<WebSession> getSession(ServerWebExchange exchange) {
+        return exchange.getSession();
     }
 
     @GetMapping("/access-token")
