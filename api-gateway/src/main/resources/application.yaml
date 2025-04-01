@@ -58,3 +58,10 @@ spring:
             - RewritePath=/test/?(?<segment>.*), /${segment}
             - CustomHeaderFilter
             - TokenRelay=
+logging:
+  level:
+    org.springframework.web.client.RestTemplate: DEBUG
+    reactor:
+      netty:
+        http:
+          client: DEBUG

@@ -2,6 +2,9 @@
 
 ## Sources 
 
+###
+https://openid.net/developers/how-connect-works/
+
 ### A Quick Guide to OAuth2 With Spring Boot And Keycloak
 
 https://www.baeldung.com/spring-boot-keycloak
@@ -30,6 +33,8 @@ https://github.com/dreamstar-enterprises/docs
 https://habr.com/ru/articles/872856/
 https://github.com/franticticktick/api-gateway
 
+### Spring Security and OpenID Connect
+https://www.baeldung.com/spring-security-openid-connect
 
 
 ## Other implementations

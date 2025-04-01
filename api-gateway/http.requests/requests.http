@@ -2,3 +2,9 @@
 GET {{keycloakUrl}}/realms/{{realm}}/protocol/openid-connect/userinfo
 Authorization: Bearer {{access_token}}
 ###
+
+GET {{keycloakUrl}}/realms/test/.well-known/openid-configuration
+
+###
+GET {{fpKeycloakUrl}}/auth/realms/FP/.well-known/openid-configuration
+
