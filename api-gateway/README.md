@@ -48,3 +48,15 @@ cd test-app
 Юзеры:
   alice/alice 
   jdoe/jdoe
+
+
+Доступ к сессиям в Redis
+
+```
+keys spring:session:*
+hkeys spring:session:sessions:123456
+hvals spring:session:sessions:123456
+hgetall spring:session:sessions:123456
+HGET spring:session:123456 yourKey
+
+```
